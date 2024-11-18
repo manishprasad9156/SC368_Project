@@ -5,13 +5,14 @@ const blogCards = document.querySelectorAll('.card'); // All blog cards
 
 // Add event listener for the search button
 searchButton.addEventListener('click', function (e) {
-    e.preventDefault(); // Prevent page reload on form submit
-
     const query = searchInput.value.toLowerCase().trim(); // Get user input and convert to lowercase
+
+    // If the search bar is empty, reload the page
     if (!query) {
-        alert('Please enter a search term.');
-        return;
+        return; // Allow the default behavior to reload the page
     }
+
+    e.preventDefault(); // Prevent default form submission when search input is not empty
 
     let found = false;
 
