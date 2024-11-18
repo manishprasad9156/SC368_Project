@@ -13,28 +13,27 @@
 
 <body>
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg bg-body-tertiary" data-bs-theme="dark">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container-fluid">
             <a class="navbar-brand" href="/index.html">My Blog</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-                aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
                         <a class="nav-link" href="/index.html">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="blog-list.html">Blogs</a>
+                        <a class="nav-link active" href="blog-list.html">Blogs</a>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                            aria-expanded="false">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
                             Categories
                         </a>
-                        <ul class="dropdown-menu">
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                             <li><a class="dropdown-item" href="#">Technology</a></li>
                             <li><a class="dropdown-item" href="#">Lifestyle</a></li>
                             <li>
@@ -58,11 +57,11 @@
     <!-- Blog List Section -->
     <div class="container my-5">
         <h1 class="text-center mb-4">All Blogs</h1>
-        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+        <div class="row g-4">
             <!-- Blog Card 1 -->
-            <div class="col">
-                <div class="card" style="width: 100%;">
-                    <img src="/Images/EII.jpg" class="card-img-top" alt="Blog Image 1">
+            <div class="col-md-6 col-lg-4">
+                <div class="card h-100">
+                    <img src="/Images/EII.jpg" class="card-img-top" alt="EII Team">
                     <div class="card-body">
                         <h5 class="card-title">EII Team</h5>
                         <p class="card-text">A brief description or excerpt from Blog 1.</p>
@@ -70,9 +69,11 @@
                     </div>
                 </div>
             </div>
-            <div class="col">
-                <div class="card" style="width: 100%;">
-                    <img src="/Images/Irani_Cafe.jpg" class="card-img-top" alt="Blog Image 2">
+
+            <!-- Blog Card 2 -->
+            <div class="col-md-6 col-lg-4">
+                <div class="card h-100">
+                    <img src="/Images/Irani_Cafe.jpg" class="card-img-top" alt="Irani Cafe">
                     <div class="card-body">
                         <h5 class="card-title">Irani Cafe</h5>
                         <p class="card-text">A brief description or excerpt from Blog 2.</p>
@@ -80,56 +81,54 @@
                     </div>
                 </div>
             </div>
-            <div class="col">
-                <div class="card" style="width: 100%;">
-                    <img src="/Images/Yuva Manthan.jpg" class="card-img-top" alt="Blog Image 4">
+
+            <!-- Blog Card 3 -->
+            <div class="col-md-6 col-lg-4">
+                <div class="card h-100">
+                    <img src="/Images/Yuva Manthan.jpg" class="card-img-top" alt="Yuva Manthan">
                     <div class="card-body">
                         <h5 class="card-title">Yuva Manthan</h5>
+                        <p class="card-text">A brief description or excerpt from Blog 3.</p>
+                        <a href="blog.html" class="btn btn-primary">Read More</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Blog Card 4 -->
+            <div class="col-md-6 col-lg-4">
+                <div class="card h-100">
+                    <img src="/Images/IITGN_Campus.jpg" class="card-img-top" alt="IITGN Campus">
+                    <div class="card-body">
+                        <h5 class="card-title">IITGN Campus</h5>
                         <p class="card-text">A brief description or excerpt from Blog 4.</p>
                         <a href="blog.html" class="btn btn-primary">Read More</a>
                     </div>
                 </div>
             </div>
 
-            <!-- Blog Card 2 -->
-            <div class="col">
-                <div class="card" style="width: 100%;">
-                    <img src="/Images/IITGN_Campus.jpg" class="card-img-top" alt="Blog Image 2">
-                    <div class="card-body">
-                        <h5 class="card-title">IITGN Campus</h5>
-                        <p class="card-text">A brief description or excerpt from Blog 2.</p>
-                        <a href="blog.html" class="btn btn-primary">Read More</a>
-                    </div>
-                </div>
-            </div>
-
-
-            <!-- Blog Card 3 -->
-            <div class="col">
-                <div class="card" style="width: 100%;">
-                    <img src="/Images/Shortcourse.jpg" class="card-img-top" alt="Blog Image 3">
+            <!-- Blog Card 5 -->
+            <div class="col-md-6 col-lg-4">
+                <div class="card h-100">
+                    <img src="/Images/Shortcourse.jpg" class="card-img-top" alt="Shortcourse">
                     <div class="card-body">
                         <h5 class="card-title">Shortcourse</h5>
-                        <p class="card-text">A brief description or excerpt from Blog 3.</p>
+                        <p class="card-text">A brief description or excerpt from Blog 5.</p>
                         <a href="blog.html" class="btn btn-primary">Read More</a>
                     </div>
                 </div>
             </div>
-            <div class="col">
-                <div class="card" style="width: 100%;">
-                    <img src="/Images/LAL_MINAR.jpg" class="card-img-top" alt="Blog Image 2">
+
+            <!-- Blog Card 6 -->
+            <div class="col-md-6 col-lg-4">
+                <div class="card h-100">
+                    <img src="/Images/LAL_MINAR.jpg" class="card-img-top" alt="Lal Minar">
                     <div class="card-body">
                         <h5 class="card-title">Lal Minar</h5>
-                        <p class="card-text">A brief description or excerpt from Blog 2.</p>
+                        <p class="card-text">A brief description or excerpt from Blog 6.</p>
                         <a href="blog.html" class="btn btn-primary">Read More</a>
                     </div>
                 </div>
             </div>
-            <!-- Additional Blog Cards -->
-            <!-- Repeat this block for a total of 10 cards -->
-            <!-- Blog Card 4 -->
-
-            <!-- Add more cards similarly for Blog Card 5 to Blog Card 10 -->
         </div>
     </div>
 
