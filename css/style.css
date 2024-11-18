@@ -1,40 +1,119 @@
+/* General Styles */
 body {
     font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f9f9f9;
+    color: #333;
     margin: 0;
     padding: 0;
+}
+
+/* Navbar */
+.navbar {
+    background-color: #343a40 !important;
+}
+
+.navbar-brand {
+    color: #fff !important;
+    font-weight: bold;
+}
+
+.navbar-nav .nav-link {
+    color: #ddd !important;
+    font-size: 1rem;
+    margin-right: 10px;
+}
+
+.navbar-nav .nav-link.active {
+    color: #fff !important;
+    font-weight: bold;
+    border-bottom: 2px solid #fff;
+}
+
+.navbar-toggler {
+    border-color: #fff;
+}
+
+/* Hero Section */
+.hero {
+    background: linear-gradient(135deg, #007bff, #6c757d);
+    color: #fff;
+    padding: 80px 20px;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+.hero p {
+    font-size: 1.2rem;
+}
+
+.hero .btn {
+    font-size: 1.2rem;
+    padding: 10px 20px;
+}
+
+/* Blog List */
+.container h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+.card {
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.card img {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    max-height: 200px;
+    object-fit: cover;
+}
+
+.card-title {
+    font-size: 1.5rem;
+    font-weight: bold;
     color: #333;
 }
 
-.navbar {
-    display: flex;
-    justify-content: space-between;
-    background: #007bff;
-    padding: 10px 20px;
-    color: #fff;
+.card-text {
+    font-size: 1rem;
+    color: #555;
 }
 
-.nav-links a {
-    color: #fff;
-    text-decoration: none;
-    margin: 0 10px;
+/* Blog Content */
+.container.blog-content {
+    max-width: 800px;
+    margin: auto;
 }
 
-.hero {
+.container.blog-content h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.container.blog-content p {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+
+/* Footer */
+footer {
+    background-color: #343a40;
+    color: #fff;
     text-align: center;
-    padding: 50px 20px;
-    background: #f4f4f4;
+    padding: 20px 0;
+    margin-top: 20px;
 }
 
-.blog-item {
-    margin: 20px;
-    padding: 15px;
-    border: 1px solid #ccc;
-    display: flex;
-    align-items: center;
-}
-
-.blog-item img {
-    width: 100px;
-    height: 100px;
-    margin-right: 15px;
+footer a {
+    color: #007bff;
+    text-decoration: none;
 }
