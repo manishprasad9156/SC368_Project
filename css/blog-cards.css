@@ -1,0 +1,58 @@
+/* Blog Cards Styling */
+.card {
+    width: 100%;
+    height: 350px; /* Set a standard height */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow: hidden;
+    border-radius: 8px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effects */
+}
+
+.card img {
+    height: 150px; /* Set a fixed height for images */
+    object-fit: cover; /* Ensure the image doesn't stretch */
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
+.card:hover {
+    transform: translateY(-10px); /* Slight upward lift effect */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Add a shadow effect */
+}
+
+.card-title {
+    font-size: 1.25rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-align: center; /* Align title to center */
+}
+
+.card-text {
+    flex-grow: 1;
+    margin-bottom: 15px;
+    text-align: justify; /* Optional for better readability */
+}
+
+.btn-primary {
+    margin: 0 auto; /* Center the button */
+    display: block;
+    transition: background-color 0.3s ease; /* Smooth transition for button hover */
+}
+
+.btn-primary:hover {
+    background-color: #0056b3; /* Change color on hover */
+}
+
+/* General Grid Adjustments */
+.row-cols-1 .col {
+    display: flex;
+    justify-content: center;
+}
+
+.row-cols-1, 
+.row-cols-md-2, 
+.row-cols-lg-3 {
+    gap: 20px; /* Add spacing between cards */
+}
