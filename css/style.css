@@ -8,35 +8,9 @@ body {
     padding: 0;
 }
 
-/* Navbar */
-.navbar {
-    background-color: #343a40 !important;
-}
-
-.navbar-brand {
-    color: #fff !important;
-    font-weight: bold;
-}
-
-.navbar-nav .nav-link {
-    color: #ddd !important;
-    font-size: 1rem;
-    margin-right: 10px;
-}
-
-.navbar-nav .nav-link.active {
-    color: #fff !important;
-    font-weight: bold;
-    border-bottom: 2px solid #fff;
-}
-
-.navbar-toggler {
-    border-color: #fff;
-}
-
 /* Hero Section */
 .hero {
-    background: linear-gradient(135deg, #007bff, #6c757d);
+    background: linear-gradient(135deg, #26292c,black );
     color: #fff;
     padding: 80px 20px;
 }
@@ -106,14 +80,10 @@ body {
 
 /* Footer */
 footer {
-    background-color: #343a40;
+    background: linear-gradient(135deg, black,#26292c );
     color: #fff;
     text-align: center;
     padding: 20px 0;
     margin-top: 20px;
 }
 
-footer a {
-    color: #007bff;
-    text-decoration: none;
-}
