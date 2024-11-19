@@ -50,7 +50,7 @@ const deleteBlog = (button) => {
 };
 
 // Event listener for form submission
-blogForm.addEventListener('submit', function(event) {
+blogForm.addEventListener('submit', function (event) {
     event.preventDefault();
 
     const title = document.getElementById('blogTitle').value;
@@ -61,7 +61,7 @@ blogForm.addEventListener('submit', function(event) {
     // If an image is uploaded, read it and convert to base64
     if (imageInput.files && imageInput.files[0]) {
         const reader = new FileReader();
-        reader.onload = function(e) {
+        reader.onload = function (e) {
             imageUrl = e.target.result;
             addBlogToPage(title, content, imageUrl);
             saveBlogs();
