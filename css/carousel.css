@@ -1,0 +1,59 @@
+/* General Styles for the Carousel */
+#carouselExampleDark {
+    max-width: 80%; /* Set a width smaller than the full page */
+    margin: 100px auto 100px auto;
+    border-radius: 15px; /* Rounded corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Card-like shadow */
+    overflow: hidden; /* Ensure images and captions respect the border radius */
+}
+
+/* Carousel inner content */
+.carousel-inner img {
+    border-radius: 15px 15px 0 0; /* Top corners rounded */
+    object-fit: cover; /* Ensure images maintain aspect ratio */
+    height: 400px; /* Adjust height of the images */
+}
+
+/* Caption styles */
+.carousel-caption {
+    background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent background */
+    border-radius: 10px;
+    padding: 10px;
+    color: #fff; /* White text */
+}
+
+/* Indicators */
+.carousel-indicators button {
+    background-color: #007bff; /* Blue indicator */
+    border: none;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+}
+
+.carousel-indicators .active {
+    background-color: #0056b3; /* Darker blue for active indicator */
+}
+
+/* Controls */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black controls */
+    border-radius: 50%;
+    padding: 10px;
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 768px) {
+    #carouselExampleDark {
+        max-width: 90%; /* Slightly smaller on mobile devices */
+    }
+
+    .carousel-inner img {
+        height: 250px; /* Reduce height on smaller screens */
+    }
+}
+
+.carousel {
+    height: 70vh;
+}
