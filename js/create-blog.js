@@ -1,33 +1,26 @@
 const blogForm = document.getElementById('blogForm');
 const blogList = document.getElementById('blogList');
 
-// Event listener for form submission
-blogForm.addEventListener('submit', function(event) {
-    event.preventDefault();
+// Load saved blogs from localStorage
+const loadBlogs = () => {
+    const blogs = JSON.parse(localStorage.getItem('blogs')) || [];
+    blogs.forEach(blog => addBlogToPage(blog.title, blog.content, blog.image));
+};
 
-    const title = document.getElementById('blogTitle').value;
-    const content = document.getElementById('blogContent').value;
-    const imageInput = document.getElementById('blogImage');
-    let imageUrl = '';
+// Save blogs to localStorage
+const saveBlogs = () => {
+    const blogs = [];
+    document.querySelectorAll('.card').forEach(card => {
+        const title = card.querySelector('.card-title').innerText;
+        const content = card.querySelector('.card-text').innerText;
+        const image = card.querySelector('img')?.src || '';
+        blogs.push({ title, content, image });
+    });
+    localStorage.setItem('blogs', JSON.stringify(blogs));
+};
 
-    // If an image is uploaded, read it and convert to base64
-    if (imageInput.files && imageInput.files[0]) {
-        const reader = new FileReader();
-        reader.onload = function(e) {
-            imageUrl = e.target.result;
-            addBlogToPage(title, content, imageUrl);
-        };
-        reader.readAsDataURL(imageInput.files[0]);
-    } else {
-        addBlogToPage(title, content, imageUrl);
-    }
-
-    // Clear the form
-    blogForm.reset();
-});
-
-// Function to add blog to the page
-function addBlogToPage(title, content, imageUrl) {
+// Add a blog to the page
+const addBlogToPage = (title, content, imageUrl) => {
     const blogDiv = document.createElement('div');
     blogDiv.classList.add('card', 'mb-4');
 
@@ -48,9 +41,40 @@ function addBlogToPage(title, content, imageUrl) {
 
     blogDiv.innerHTML = blogContent;
     blogList.prepend(blogDiv);
-}
+};
 
-// Function to delete a blog
-function deleteBlog(button) {
+// Delete a blog
+const deleteBlog = (button) => {
     button.parentElement.parentElement.remove();
-}
+    saveBlogs();
+};
+
+// Event listener for form submission
+blogForm.addEventListener('submit', function(event) {
+    event.preventDefault();
+
+    const title = document.getElementById('blogTitle').value;
+    const content = document.getElementById('blogContent').value;
+    const imageInput = document.getElementById('blogImage');
+    let imageUrl = '';
+
+    // If an image is uploaded, read it and convert to base64
+    if (imageInput.files && imageInput.files[0]) {
+        const reader = new FileReader();
+        reader.onload = function(e) {
+            imageUrl = e.target.result;
+            addBlogToPage(title, content, imageUrl);
+            saveBlogs();
+        };
+        reader.readAsDataURL(imageInput.files[0]);
+    } else {
+        addBlogToPage(title, content, imageUrl);
+        saveBlogs();
+    }
+
+    // Clear the form
+    blogForm.reset();
+});
+
+// Load blogs on page load
+window.addEventListener('DOMContentLoaded', loadBlogs);
